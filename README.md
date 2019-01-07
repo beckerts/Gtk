@@ -5,7 +5,7 @@ Goal was to write c++ apps on raspbian to control GPIOs. Experimented writing c+
 Key websites are:<br>
 gtkmm: https://developer.gnome.org/gtkmm-tutorial/stable/index.html.en<br>
 example code from gtkmm book: https://gitlab.gnome.org/GNOME/gtkmm-documentation/tree/gtkmm-3-24/examples/book<p>
-Exploring raspberry pi 2 with cpp code:<br>
+Exploring the Raspberry Pi 2 with C++ code:<br>
 Apress points here: https://github.com/Apress/exploring-raspberry-pi-2-w-cpp/tree/master/raspberry_pi2/jessie<br>
 Book points here: https://github.com/ve3wwg/raspberry_pi2 Above site appears to be latest. Put this here just in case.<br>
 The Makefile in piweb does not work. The following line under piweb needs to be edited:<p>
