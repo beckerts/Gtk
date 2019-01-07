@@ -2,7 +2,7 @@
 #include <iostream>
 
 // just adding a comment to see if creating a ssh key works with git gui and github
-
+// First try did not work. Now I added the public key to the Gtk repo
   Gtk::Window* pwindow = nullptr;
   Gtk::Entry* ptxtStatus = nullptr;
 
