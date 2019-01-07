@@ -6,5 +6,6 @@ Goal was to write c++ apps on raspbian to control GPIOs. Experimented writing c+
 Key websites are:<p>
 gtkmm: https://developer.gnome.org/gtkmm-tutorial/stable/index.html.en<p>
 example code from gtkmm book: https://gitlab.gnome.org/GNOME/gtkmm-documentation/tree/gtkmm-3-24/examples/book<p>
-Exploring raspberry pi 2 with cpp code: https://github.com/Apress/exploring-raspberry-pi-2-w-cpp/tree/master/raspberry_pi2/jessie<p>
-Also found here: https://github.com/ve3wwg/raspberry_pi2 Above site appears to be latest. Put this here just in case.<p>
+Exploring raspberry pi 2 with cpp code:<p>
+Apress points here: https://github.com/Apress/exploring-raspberry-pi-2-w-cpp/tree/master/raspberry_pi2/jessie<p>
+Book points here: https://github.com/ve3wwg/raspberry_pi2 Above site appears to be latest. Put this here just in case.<p>
