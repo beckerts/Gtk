@@ -1,6 +1,8 @@
 #include <gtkmm.h>
 #include <iostream>
 
+// just adding a comment to see if creating a ssh key works with git gui and github
+
   Gtk::Window* pwindow = nullptr;
   Gtk::Entry* ptxtStatus = nullptr;
 
