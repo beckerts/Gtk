@@ -59,6 +59,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Click this button to close the app</property>
             <property name="halign">center</property>
             <property name="valign">center</property>
           </object>
