@@ -11,6 +11,12 @@
 	  if(ptxtStatus) ptxtStatus->set_text("Hello Glade World!");
   }
 
+  static void on_btnQuit_clicked()
+  {
+    if(pwindow)
+      pwindow->hide();
+  }
+
 int main(int argc, char* argv[])
 {
   auto app = Gtk::Application::create(argc, argv, "org.gtkmm.examples.base");
@@ -49,6 +55,13 @@ int main(int argc, char* argv[])
 	  {
 		  pButton->signal_clicked().connect(sigc::ptr_fun(on_btnHelloWorld_clicked));
 	  }
+
+    Gtk::Button* pbtnQuit = nullptr;
+    refBuilder->get_widget("btnQuit", pbtnQuit);
+    if(pbtnQuit)
+    {
+      pbtnQuit->signal_clicked().connect(sigc::ptr_fun(on_btnQuit_clicked));
+    }
   }
   
   app->run(*pwindow);
