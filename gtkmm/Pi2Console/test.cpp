@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>
+#include <string>
 
 #include "gpio.hpp"
 
@@ -9,7 +10,7 @@ int main(int argc, char* argv[])
 {
     GPIO gpio;
     GPIO::IO io;
-    int gpno=5;
+    int gpno,er;
     string pparm = "-p";
 
     cout << "argc = " << argc << endl;
@@ -26,6 +27,10 @@ int main(int argc, char* argv[])
     cout << "gpio declared" << endl;
     cout << "io declared"<< endl;
     cout << "gpno declared: " << gpno << endl;
+    if ( (er = gpio.configure(gpno,GPIO::Output)) != 0 ) {
+                cout << er << ": setting -p " << gpno << " output" << endl;
+                exit(2);
+            }
     cout << "value: " << gpio.read(gpno) << endl;
     
 	return 0;
