@@ -24,6 +24,13 @@ int main(int argc, char* argv[])
     int gpno,er;
     string pparm = "-p";
 
+    if ( gpio.get_error() ) {
+        fprintf(stderr,
+            "%s: Opening gpio\n",
+            strerror(gpio.get_error()));
+        exit(3);
+    }
+
     cout << "argc = " << argc << endl;
     for (int i =0; i<argc; i++)
     {
@@ -36,12 +43,6 @@ int main(int argc, char* argv[])
         if (!(convert >> gpno)) gpno = 0;
     }
     cout << "gpio declared" << endl;
-    if ( gpio.get_error() ) {
-        fprintf(stderr,
-            "%s: Opening gpio\n",
-            strerror(gpio.get_error()));
-        exit(3);
-    }
     cout << "io declared"<< endl;
     cout << "gpno declared: " << gpno << endl;
     if ( (er = gpio.configure(gpno,GPIO::Output)) != 0 ) {
