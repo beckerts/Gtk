@@ -1,14 +1,14 @@
-all: test
+all: testcpp
 
-test: test.o libs
-	g++ -o test test.o -L./lib -ltestlib
+testcpp: testcpp.o libs
+	g++ -o testcpp testcpp.o -L./lib -ltestlib
 
-test.o: test.c
-	g++ -c test.c
+testcpp.o: testcpp.cpp
+	g++ -c testcpp.cpp
 
 libs:
 	$(MAKE) -C lib
 
 clean:
-	rm *.o test
+	rm *.o testcpp
 	$(MAKE) -C lib clean
