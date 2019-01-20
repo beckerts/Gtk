@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <string.h>
 
 #include "gpio.hpp"
 
@@ -25,10 +26,19 @@ int main(int argc, char* argv[])
         if (!(convert >> gpno)) gpno = 0;
     }
     cout << "gpio declared" << endl;
+    if ( gpio.get_error() ) {
+        fprintf(stderr,
+            "%s: Opening gpio\n",
+            strerror(gpio.get_error()));
+        exit(3);
+    }
     cout << "io declared"<< endl;
     cout << "gpno declared: " << gpno << endl;
     if ( (er = gpio.configure(gpno,GPIO::Output)) != 0 ) {
-                cout << er << ": setting -p " << gpno << " output" << endl;
+                fprintf(stderr,
+                    "%s: Setting -g %d -o\n",
+                    strerror(er),
+                    gpno);
                 exit(2);
             }
     cout << "value: " << gpio.read(gpno) << endl;
