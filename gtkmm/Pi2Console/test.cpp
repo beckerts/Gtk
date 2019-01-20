@@ -7,9 +7,10 @@
 
 using namespace std;
 
+static GPIO gpio;
+
 int main(int argc, char* argv[])
 {
-    GPIO gpio;
     GPIO::IO io;
     int gpno,er;
     string pparm = "-p";
