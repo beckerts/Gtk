@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+gtkmm/StaticLib/test
+gtkmm/StaticLib/testcpp
+gtkmm/Pi2Console/test

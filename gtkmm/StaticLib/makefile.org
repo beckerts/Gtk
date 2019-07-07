@@ -1,0 +1,16 @@
+all: test
+
+test: test.o
+    g++ -o test test.o testlib.a
+
+test.o: test.c
+    g++ -c test.c
+
+testlib.a: test1.o test2.o
+    ar rsv testlib.a test1.o test2.o
+
+test1.o: test1.c
+    g++ -c test1.c
+
+test2.o: test2.c
+    g++ -c test2.c
